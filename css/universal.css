@@ -46,55 +46,55 @@ header nav a:hover {
   background-color: #34586b; /* Light blue background on hover */
 }
 
-/* Main Product Details Section */
-.product-details {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+/* Main Section */
+main {
+  max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  max-width: 1000px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.product-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.product-info {
-  max-width: 500px;
-  margin-left: 20px;
-}
-
-.product-info h2 {
+h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.product-description {
-  font-size: 1.1rem;
   margin-bottom: 20px;
-  color: #555;
+  text-align: center;
+  color: #333;
 }
 
-.product-price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #4CAF50;
-  margin-bottom: 20px;
-}
-
-.product-actions {
+/* Form Styles */
+form {
   display: flex;
+  flex-direction: column;
   gap: 15px;
 }
 
-.product-actions button {
-  padding: 12px 20px;
+label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+button {
+  padding: 12px;
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -104,15 +104,15 @@ header nav a:hover {
   transition: background-color 0.3s ease;
 }
 
-.product-actions button:hover {
+button:hover {
   background-color: #45a049;
 }
 
-.product-actions button:active {
+button:active {
   background-color: #388e3c;
 }
 
-/* Footer Styling */
+/* Footer Styles */
 footer {
   background-color: #1e3d58;
   color: white;
@@ -130,30 +130,35 @@ footer p {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .product-details {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
+  header h1 {
+    font-size: 2rem;
   }
 
-  .product-image img {
-    max-width: 90%;
-  }
-
-  .product-info {
-    margin-left: 0;
+  header nav {
     text-align: center;
   }
 
-  .product-info h2 {
-    font-size: 1.8rem;
+  header nav a {
+    display: inline-block;
+    margin: 5px 10px;
   }
 
-  .product-description {
+  main {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  input, textarea, button {
     font-size: 1rem;
-  }
-
-  .product-price {
-    font-size: 1.3rem;
+    padding: 10px;
   }
 }
