@@ -8,16 +8,16 @@
 /* General body styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #3e0455; /* Custom background for product page */
+  background-color: #f9f9f9; /* Light background color for promotions page */
   color: #333;
   line-height: 1.6;
 }
 
 /* Header Styling */
 header {
-  background-color: #464242; /* Dark gray header background */
+  background-color: #333; /* Dark background for the header */
   color: white;
-  padding: 10px 20px;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -32,13 +32,13 @@ header nav {
 header nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  margin: 0 10px;
+  padding: 10px;
 }
 
 header nav a:hover {
-  text-decoration: underline;
+  background-color: #555; /* Hover effect for navigation links */
+  border-radius: 5px;
 }
 
 /* Main Section */
@@ -48,13 +48,50 @@ main {
   margin: 0 auto;
 }
 
+/* Title for product or promotion */
 h2 {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 20px;
 }
 
-/* Product List */
+/* Promotion Styles (Specific for promotions page) */
+.promotion {
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.promotion h3 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.promotion p {
+  font-size: 1em;
+  color: #555;
+}
+
+.promo-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.promo-details p {
+  flex: 2;
+}
+
+strong {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Product List (For product page) */
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -105,7 +142,7 @@ h2 {
   transform: scale(1.05);
 }
 
-/* Hover Effects */
+/* Hover Effects for product items */
 .product:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
@@ -116,9 +153,10 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 20px;
-  font-size: 1rem;
-  margin-top: 30px;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
@@ -156,6 +194,25 @@ footer p {
   footer {
     font-size: 0.9rem;
   }
+
+  /* Adjust promotion details for smaller screens */
+  .promo-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-image {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .promotion h3 {
+    font-size: 1.4em;
+  }
+
+  .promotion p {
+    font-size: 1.1em;
+  }
 }
 
 @media (max-width: 480px) {
@@ -173,5 +230,14 @@ footer p {
 
   footer {
     font-size: 0.8rem;
+  }
+
+  /* Adjust promotion text and images for very small screens */
+  .promotion h3 {
+    font-size: 1.3em;
+  }
+
+  .promotion p {
+    font-size: 1.1em;
   }
 }
